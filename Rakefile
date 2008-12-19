@@ -3,13 +3,14 @@ require 'rake/gempackagetask'
 require 'rubygems/specification'
 require 'date'
 require 'spec/rake/spectask'
+require 'spec'
 
 GEM = "opp"
 GEM_VERSION = "0.0.1"
-AUTHOR = "Your Name"
-EMAIL = "Your Email"
-HOMEPAGE = "http://example.com"
-SUMMARY = "A gem that provides..."
+AUTHOR = "Jack Dempsey"
+EMAIL = "jack.dempsey@gmail.com"
+HOMEPAGE = "http://jackndempsey.blogspot.com"
+SUMMARY = "A gem that provides more controlled pretty printing of objects"
 
 spec = Gem::Specification.new do |s|
   s.name = GEM
@@ -24,7 +25,7 @@ spec = Gem::Specification.new do |s|
   s.homepage = HOMEPAGE
   
   # Uncomment this to add a dependency
-  # s.add_dependency "foo"
+  s.add_development_dependency "sequel"
   
   s.require_path = 'lib'
   s.autorequire = GEM
